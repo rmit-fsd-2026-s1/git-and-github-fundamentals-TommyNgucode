@@ -13,8 +13,9 @@ form.addEventListener('submit', () => {
         }
     })
 
-    
     submitBtn.disabled = !allFillled;
 
-}
+    }
 )
+
+

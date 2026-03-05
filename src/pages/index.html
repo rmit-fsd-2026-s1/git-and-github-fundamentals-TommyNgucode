@@ -24,12 +24,13 @@
             <div class="username-box">
                 <label for="firstName">Name</label>
                 <div class="name-field">
+                    <!-- Text only for both fields -->
                     <input required type="text" id="firstName" name="firstName" placeholder=" First">
                     <input required type="text" id="lastName" name="lastName" placeholder=" Last">
                 </div>
             </div>
 
-
+            <!-- regex format for emails [a-zA-Z0-9]+@[a-zA-Z0-9]+\.com -->
             <label for="email">Email</label>
             <input required type="text" id="email" name="email" >
 
@@ -37,9 +38,9 @@
             <!-- Add validation text format due to phone number's unqiue format -->
             <input required type="text" id="phone" name="phone" placeholder=" ###  ### ####">
 
-            <!-- make messsage box expanable -->
+            <!-- make messsage box expanable + word limit -->
             <label for="message">Message</label>
-            <input type="text" id="message" name="message">
+            <input type="text" id="message" name="message" maxlength="200">
             
 
             <button id="submitBtn" type="submit">SEND</button>
