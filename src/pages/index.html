@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="./index.js"></script>
+
+</head>
+
+<body>
+
+    <main>
+
+    </main>
+
+    <body>
+        <p>Online Registration Form</p>
+
+        <form class="formBox" id="form">
+
+            <div class="username-box">
+                <label for="firstName">Name</label>
+                <div class="name-field">
+                    <input required type="text" id="firstName" name="firstName" placeholder=" First">
+                    <input required type="text" id="lastName" name="lastName" placeholder=" Last">
+                </div>
+            </div>
+
+
+            <label for="email">Email</label>
+            <input required type="text" id="email" name="email" >
+
+            <label for="phone">Phone</label>
+            <!-- Add validation text format due to phone number's unqiue format -->
+            <input required type="text" id="phone" name="phone" placeholder=" ###  ### ####">
+
+            <!-- make messsage box expanable -->
+            <label for="message">Message</label>
+            <input type="text" id="message" name="message">
+            
+
+            <button id="submitBtn" type="submit">SEND</button>
+        </form>
+
+    </body>
+
+
+    <footer>
+
+    </footer>
+</body>
+</html>
