@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../styles/style.css">
-    <script src="./index.js"></script>
-
 </head>
 
 <body>
@@ -25,18 +23,18 @@
                 <label for="firstName">Name</label>
                 <div class="name-field">
                     <!-- Text only for both fields -->
-                    <input required type="text" id="firstName" name="firstName" placeholder=" First">
-                    <input required type="text" id="lastName" name="lastName" placeholder=" Last">
+                    <input required type="text" id="firstName" name="firstName" placeholder="First">
+                    <input required type="text" id="lastName" name="lastName" placeholder="Last">
                 </div>
             </div>
 
             <!-- regex format for emails [a-zA-Z0-9]+@[a-zA-Z0-9]+\.com -->
             <label for="email">Email</label>
-            <input required type="text" id="email" name="email" >
+            <input required type="text" id="email" name="email" pattern="[a-zA-Z0-9]+@[a-zA-Z0-9]+\.com" >
 
             <label for="phone">Phone</label>
             <!-- Add validation text format due to phone number's unqiue format -->
-            <input required type="text" id="phone" name="phone" placeholder=" ###  ### ####">
+            <input required type="text" id="phone" name="phone" placeholder="### ### ####" pattern="[0-9]{3} [0-9]{3} [0-9]{3}">
 
             <!-- make messsage box expanable + word limit -->
             <label for="message">Message</label>
@@ -52,5 +50,6 @@
     <footer>
 
     </footer>
+    <script src="script.js"> </script>
 </body>
 </html>

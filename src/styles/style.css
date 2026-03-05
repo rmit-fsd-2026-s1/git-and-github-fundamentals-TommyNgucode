@@ -27,8 +27,14 @@ input {
     border: 1.2px solid rgb(153, 85, 217);
     border-radius: 3px;
     background: transparent;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
+
+input:focus {
+    outline: none;
+}
 
 p {
     margin-top: 80px;
