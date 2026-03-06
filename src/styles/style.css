@@ -53,9 +53,28 @@ p {
 
 }
 
-.username-box {
+.fields {
     display: flex;
     flex-direction: column;
+}
+
+/* :invalid -> if input's value is invalid
+   :user-invalid -> once user has interacted and then the value is invalid */
+input:user-invalid {
+    border: 1px solid red;
+}
+.error-message {
+    padding-top: 10px;
+    color: red;
+}
+.error-message:empty {
+    display: none;
+}
+/* .row-grid {
+    display: grid;
+    grid-template-columns:1fr, 1fr;
+} */
+.username-box {
     gap: 5px;
 }
 

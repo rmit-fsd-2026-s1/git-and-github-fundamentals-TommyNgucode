@@ -17,29 +17,61 @@
     <body>
         <p>Online Registration Form</p>
 
-        <form class="formBox" id="form">
-
-            <div class="username-box">
+        <form class="formBox" id="form" novalidate>
+            
+            <!-- Ask tutor if there is a simpler way to do this? -->
+            <div class="fields username-box">
                 <label for="firstName">Name</label>
+                
                 <div class="name-field">
-                    <!-- Text only for both fields -->
-                    <input required type="text" id="firstName" name="firstName" placeholder="First">
-                    <input required type="text" id="lastName" name="lastName" placeholder="Last">
+
+                    <div class="fields">
+                        <input required type="text" id="firstName" name="firstName" placeholder="First">
+                        <span class="error-message" aria-live="polite"></span>
+                    </div>
+
+                    <div class="fields">
+                        <input required type="text" id="lastName" name="lastName" placeholder="Last">
+                        <span class="error-message" aria-live="polite"></span>
+                    </div>
+
                 </div>
+        
             </div>
 
-            <!-- regex format for emails [a-zA-Z0-9]+@[a-zA-Z0-9]+\.com -->
-            <label for="email">Email</label>
-            <input required type="text" id="email" name="email" pattern="[a-zA-Z0-9]+@[a-zA-Z0-9]+\.com" >
+            <!-- <div class="fields row-grid">
+                <label for="fName">Name</label>
+                <input required type="text" id="fName" name="fName" >
+                <span class="error-message"></span>
+            </div>
 
-            <label for="phone">Phone</label>
-            <!-- Add validation text format due to phone number's unqiue format -->
-            <input required type="text" id="phone" name="phone" placeholder="### ### ####" pattern="[0-9]{3} [0-9]{3} [0-9]{3}">
+            <div class="fields row-grid">
+                <label for="lName"></label>
+                <input required type="text" id="lName" name="lName" >
+                <span class="error-message"></span>
+            </div> -->
+
+            <!-- regex format for emails [a-zA-Z0-9]+@[a-zA-Z0-9]+\.com pattern="[a-zA-Z0-9]+@[a-zA-Z0-9]+\.com" -->
+            <div class="fields">
+                <label for="email">Email</label>
+                <input required type="email" id="email" name="email">
+                <span class="error-message" aria-live="polite"></span>
+            </div>
+
+            <div class="fields">
+                <label for="phone">Phone</label>
+                <!-- Add validation text format due to phone number's unqiue format pattern="[0-9]{3} [0-9]{3} [0-9]{3}-->
+                <input required type="text" id="phone" name="phone" placeholder="### ### ####" pattern="[0-9]{3} [0-9]{3} [0-9]{3}">
+                <span class="error-message" aria-live="polite"></span>
+            </div>
+
 
             <!-- make messsage box expanable + word limit -->
-            <label for="message">Message</label>
-            <input type="text" id="message" name="message" maxlength="200">
-            
+            <div class="fields">
+                <label for="message">Message</label>
+                <input type="text" id="message" name="message" maxlength="200">
+                <span class="error-message" aria-live="polite"></span>
+            </div>
 
             <button id="submitBtn" type="submit">SEND</button>
         </form>
